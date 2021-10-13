@@ -3,7 +3,7 @@ import "./Counter.css"
 
 export  class Counter extends React.Component {
 
-    counter = 20
+    counter = 10
 
     constructor(props) {
         super(props);
@@ -16,17 +16,16 @@ export  class Counter extends React.Component {
 
     componentDidMount() {
         this.timerId = setInterval(() => {
-            this.setState((prevState) => {
-                if (this.counter === 0) {
-                    clearInterval(this.timerId)
-                } else {
-                    this.counter -= 1
+            if (this.counter === 0) {
+                clearInterval(this.timerId)
+            } else {
+                this.counter -= 1
+                this.setState((prevState) => {
                     return {
                         sum: prevState.sum + 1,
                     }
-                }
-
-            })
+                })
+            }
         }, 1000);
     }
 
