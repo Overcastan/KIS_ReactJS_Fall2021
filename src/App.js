@@ -1,12 +1,17 @@
 import './App.css';
-import {Clock} from './Clock';
+import {Counter} from './Counter';
 
 
 
 function App() {
   return (
     <div className="App">
-      <Clock />
+        <div>
+            <Counter counterNumber="first" start={0}/>
+        </div>
+        <div>
+            <Counter counterNumber="second" start={10}/>
+        </div>
     </div>
   );
 }
