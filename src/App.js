@@ -1,17 +1,13 @@
 import './App.css';
-import {Counter} from './Counter';
+import {CommonState} from './LiftingStateUp';
+import React from "react";
 
 
 
 function App() {
   return (
     <div className="App">
-        <div>
-            <Counter counterNumber="first" start={0}/>
-        </div>
-        <div>
-            <Counter counterNumber="second" start={10}/>
-        </div>
+        <CommonState />
     </div>
   );
 }
