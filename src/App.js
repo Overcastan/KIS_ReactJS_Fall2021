@@ -1,13 +1,11 @@
 import './App.css';
-import {CommonState} from './LiftingStateUp';
+import {MainForm} from './MainForm';
 import React from "react";
-
-
 
 function App() {
   return (
     <div className="App">
-        <CommonState />
+        <MainForm />
     </div>
   );
 }
